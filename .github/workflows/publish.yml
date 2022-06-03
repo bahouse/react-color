@@ -16,8 +16,6 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: '@bahouse'
       - run: npm install
-      - run: |
-          npm config set //npm.pkg.github.com/:_authToken $TOKEN
-          npm publish --access public
+      - run: npm publish --access public
         env:
           TOKEN: ${{secrets.GITHUB_TOKEN}}
