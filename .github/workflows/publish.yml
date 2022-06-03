@@ -15,7 +15,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           # Defaults to the user or organization that owns the workflow file
           scope: '@bahouse'
-      - run: npm ci
+      - run: npm install
       - run: |
           npm config set //npm.pkg.github.com/:_authToken $TOKEN
           npm publish --access public
